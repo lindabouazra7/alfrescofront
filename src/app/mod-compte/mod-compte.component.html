@@ -1,0 +1,43 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+     Modifier mon compte
+
+    </h1>
+
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="box">
+          <div class="box-header">
+            <h3 class="box-title"> </h3>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+
+  <form role="form">
+    <!-- text input -->
+    <div class="form-group">
+      <label>Nom</label>
+      <input type="text" class="form-control" placeholder="Nom" name="nom" [(ngModel)]="name">
+    </div>
+
+    <div>
+      <label>prénom</label>
+      <input type="text" class="form-control" placeholder="Prénom." name="prénom" [(ngModel)]="lastname">
+    </div>
+    <div>
+      <label>Email</label>
+      <input type="text" class="form-control" placeholder="Email." name="email" [(ngModel)]="email">
+    </div>
+    <div>
+      <label>Mot de passe </label>
+      <input type="text" class="form-control" placeholder="Mot de passe." name="password" [(ngModel)]="password">
+    </div>
+   
+  </form>
+  <button type="button" class="btn btn-default pull-left" (click)="updateUser(name,name,lastname,email,password)" >Modifier</button>

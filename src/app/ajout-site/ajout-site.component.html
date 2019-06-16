@@ -1,0 +1,65 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li><a href="#">Forms</a></li>
+      <li class="active">General Elements</li>
+    </ol>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <!-- left column -->
+      <div class="col-md-6">
+        <!-- general form elements -->
+        <div class="box box-primary">
+
+        </div>
+        <!-- /.box -->
+        <!-- general form elements disabled -->
+        <div class="box box-warning">
+          <div class="box-header with-border">
+            <h3 class="box-title">Ajouter un site </h3>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <form role="form">
+              <!-- text input -->
+              <div class="form-group">
+                <label>Titre du site</label>
+                <input type="text" class="form-control" placeholder="Title" name="title" [(ngModel)]="title">
+              </div>
+
+            <div>
+              <label>visibilité</label>
+              <input type="text" class="form-control" placeholder="Visibilité." name="visibilité" [(ngModel)]="visibility">
+            </div>
+              <div>
+                <label>Description</label>
+                <input type="text" class="form-control" placeholder="Description." name="description" [(ngModel)]="description">
+              </div>
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary" (click)="createSite(title,visibility,description)">Ajouter</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+ <!-- <div class="form-group" [(ngModel)]="vis" (change)="getValue(vis)">
+    <label>
+      <input type="radio" name="pb" value="pb" class="flat-red" checked>
+    </label>
+    <label>
+      <input type="radio" name="pr" value="pr" class="flat-red">
+    </label>
+
+  </div>-->
+</div>

@@ -1,0 +1,58 @@
+
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Liste des utilisateurs <img src="assets/dist/img/users (1).png">
+
+    </h1>
+
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="box">
+          <div class="box-header">
+            <h3 class="box-title"> </h3>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <input name="args" [(ngModel)]="args" placeholder="Entrez le titre"><br>
+            <table id="example2" class="table table-bordered table-hover">
+              <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Titre de travail</th>
+                <th>Numero de telephone </th>
+                <th>Email</th>
+                <th>Company</th>
+                <th>Organisation</th>
+                <th>Organisation</th>
+              </tr>
+              </thead>
+              <tbody>
+
+              <tr *ngFor="let user of infouser ">
+                <td>{{user.entry.postPersonId}}</td>
+                <td>{{user.entry.id}}</td>
+                <td>{{user.entry.siteId}}</td>
+                <td>{{user.entry.postedAt}}</td>
+                <td>{{user.entry.feedPersonId}}</td>
+                <td>{{user.entry.activitySummary.firstName}}</td>
+                <td>{{user.entry.activitySummary.title}}</td>
+                <td>{{user.entry.activityType}}</td>
+
+
+
+            </table>
+          </div>
+          <!-- /.box-body -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>

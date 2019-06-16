@@ -1,0 +1,59 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Table DS
+    
+      </h1>
+    
+    </section>
+    
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title"> </h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <input name="args" [(ngModel)]="args" placeholder="Entrez le titre"><br>
+              <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Num Employeur</th>
+                  <th>BR</th>
+                  <th>Code d'exploitation </th>
+                  <th>Matricule fiscal  </th>
+                  <th>Trimestre </th>
+                  <th>Année</th>
+
+    
+                </tr>
+                </thead>
+                <tbody>
+    
+                <tr *ngFor="let process of listprocessDef">
+                  <td>{{process.entry.id}}</td>
+                  <td>{{process.entry.key}}</td>
+                  <td>{{process.entry.name}}</td>
+                  <td>{{process.entry.category}}</td>
+                  <td>{{process.entry.deploymentId}}</td>
+                  <td>{{process.entry.title}}</td>
+                  <td>{{process.entry.description}}</td>
+                
+    
+    
+    
+    
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    

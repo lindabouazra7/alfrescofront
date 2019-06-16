@@ -1,0 +1,55 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Liste des Fichiers <img src="assets/dist/img/file.png">
+  
+      </h1>
+  
+    </section>
+  
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title"> </h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <input name="args" [(ngModel)]="args" placeholder="Entrez le titre"><br>
+              <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>Nom</th>
+
+                    <th>Créé par  </th>
+                    <th>Créé en   </th>
+    
+                    <th>Type de node</th>
+                    <th>Dossier  </th>
+                    <th>Fichier  </th>
+                </tr>
+                </thead>
+                <tbody>
+  
+                <tr *ngFor="let fichier of fichierList ">
+                    <td>{{fichier.entry.name}}</td>
+                    <td>{{fichier.entry.createdByUser.id}}</td>
+                    <td>{{fichier.createdAt}}</td>
+                    <td>{{fichier.nodeType}}</td>
+                    <td>{{fichier.isFolder}}</td>
+                    <td>{{fichier.isFile}}</td>
+  
+  
+  
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+
+
+          
+  
+  

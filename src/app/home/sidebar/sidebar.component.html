@@ -1,0 +1,98 @@
+<aside class="main-sidebar">
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar">
+    <!-- Sidebar user panel -->
+    
+    <!-- search form -->
+    <form action="#" method="get" class="sidebar-form">
+      <div class="input-group">
+        <input type="text" name="q" class="form-control" placeholder="Search...">
+        <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+      </div>
+    </form>
+    <!-- /.search form -->
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="sidebar-menu" data-widget="tree">
+      <li class="header"><img src="assets/dist/img/cnss.png" width="50%" height="10%"></li>
+      <li class="active treeview" *ngIf="admin||user">
+        <a routerLink="/home">
+          <i class="fa fa-dashboard"></i> <span>Acueil </span>
+          <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+
+      </li>
+      <li *ngIf="admin">
+        <a routerLink="listfolder" >
+          <i class="fa fa-th"></i> <span>Dossiers et Fichiers</span>
+          <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+      </li>
+      <li *ngIf="admin">
+        <a routerLink="listUser" >
+          <i class="fa fa-th"></i> <span>Liste utilisateurs</span>
+          <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+      </li>
+      <li *ngIf="admin">
+        <a routerLink="listgroup" >
+          <i class="fa fa-th"></i> <span>Liste Groupes</span>
+          <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+      </li>
+      <li class="treeview" *ngIf="admin ||user">
+        <a >
+          <i class="fa fa-laptop"></i>
+          <span> Gérer Utilisateurs</span>
+          <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a routerLink="users"><i class="fa fa-circle-o"></i> Ajouter utilisateur</a></li>
+          <li><a routerLink="users" ><i class="fa fa-circle-o"></i> Supprimer utilisateur</a></li>
+         <!-- <li><a routerLink="form" ><i class="fa fa-circle-o"></i> ajouter </a></li>-->
+          <li><a routerLink="users" ><i class="fa fa-circle-o"></i> Donner l'accès </a></li>
+        </ul>
+      </li>
+         <li class="treeview" *ngIf="admin ||user">
+        <a >
+          <i class="fa fa-laptop"></i>
+          <span> Gérer rôles</span>
+          <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a routerLink="role"><i class="fa fa-circle-o"></i> Ajouter roles</a></li>
+          <li><a routerLink="role" ><i class="fa fa-circle-o"></i> supprimer roles</a></li>
+         <!-- <li><a routerLink="form" ><i class="fa fa-circle-o"></i> ajouter </a></li>-->
+          <li><a routerLink="role" ><i class="fa fa-circle-o"></i> modifier roles </a></li>
+        </ul>
+      </li>
+      <li class="treeview" *ngIf="admin">
+        <a >
+          <i class="fa fa-edit"></i> <span>Sites</span>
+          <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a routerLink="site"><i class="fa fa-circle-o"></i> Mes sites</a></li>
+          <li><a routerLink="favsite"><i class="fa fa-circle-o"></i> Les sites favorés</a></li>
+          <li><a routerLink="ajoutsite"><i class="fa fa-circle-o"></i> creé un site</a></li>
+        </ul>
+      </li>
+     </ul>
+     </section>
+     </aside>

@@ -1,0 +1,59 @@
+<div class="content-wrapper">
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Liste des Workflows
+
+  </h1>
+
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title"> </h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <input name="args" [(ngModel)]="args" placeholder="Entrez le titre"><br>
+          <table id="example2" class="table table-bordered table-hover">
+            <thead>
+            <tr>
+              <th>ID</th>
+              <th>Process de définition</th>
+              <th>Démarré par</th>
+              <th>Démarrés</th>
+              <th>Date d'achèvement </th>
+              <th>Statut </th>
+
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr *ngFor="let workflow of listWorkflow | workflow:args">
+              <td>{{workflow.entry.id}}</td>
+              <td>{{workflow.entry.processDefinitionId}}</td>
+              <td>{{workflow.entry.startUserId}}</td>
+              <td>{{workflow.entry.startedAt}}</td>
+              <td>{{workflow.entry.endedAt}}</td>
+              <td>{{workflow.entry.startActivityId}}</td>
+              <td>{{workflow.entry.startActivityDefinitionId}}</td>
+              <td>{{workflow.entry.endActivityDefinitionId}}</td>
+
+              <td>{{workflow.entry.deleteReason}}</td>
+
+
+
+
+
+          </table>
+        </div>
+        <!-- /.box-body -->
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,135 @@
+<!--   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+     <h1> Liste des groupes!</h1>
+        
+     <div>
+      <table class="table table-bordered">
+              <thead>
+            <tr>
+                <th>Nom</th> 
+                
+                <th>Créé par  </th>
+                <th>Root   </th>
+               
+               
+              
+               
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of restItems.list.entries "> 
+               <td>{{item.entry.displayName}}</td>
+                <td>{{item.entry.id}}</td>
+                <td>{{item.entry.isRoot}}</td>
+               
+               
+            </tr>
+          </tbody>   
+        </table>
+    </div>
+  -->
+<!--
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="header">
+            <h4 class="title">Liste des Groupes </h4>
+
+          <div class="content table-responsive table-full-width">
+            <table class="table table-hover table-striped">
+              <thead>
+              <th>Nom</th>
+              <th>Créé par</th>
+
+              <th>Root</th>
+              <th>Actions</th>
+              </thead>
+              <tbody>
+              <tr *ngFor="let group of groupList ">
+                <td>{{group.entry.displayName}}</td>
+                <td>{{group.entry.id}}</td>
+                <td>{{group.entry.isRoot}}</td>
+
+
+                <td class="td-actions text-right">
+
+                  <button type="button" rel="tooltip" title="Afficher" class="btn btn-info btn-simple btn-xs">
+
+                    <i class="fa fa-user"></i>
+
+                  </button>
+
+                  <button type="button" rel="tooltip" title="Modifier" class="btn btn-success btn-simple btn-xs">
+
+                    <i class="fa fa-edit"></i>
+
+                  </button>
+
+                  <button type="button" rel="tooltip" title="Supprimer" class="btn btn-danger btn-simple btn-xs">
+
+                    <i class="fa fa-times"></i>
+
+                  </button>
+
+                </td>
+
+
+              </tr>
+              </tbody>
+            </table>
+
+          </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+-->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Liste des Groupes <img src="assets/dist/img/group.png">
+
+    </h1>
+
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="box">
+          <div class="box-header">
+            <h3 class="box-title"> </h3>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <input name="args" [(ngModel)]="args" placeholder="Entrez le titre"><br>
+            <table id="example2" class="table table-bordered table-hover">
+              <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Créé par</th>
+
+                <th>Root</th>
+              </tr>
+              </thead>
+              <tbody>
+
+              <tr *ngFor="let group of groupList | group:args">
+                <td>{{group.entry.displayName}}</td>
+                <td>{{group.entry.id}}</td>
+                <td>{{group.entry.isRoot}}</td>
+
+
+
+
+            </table>
+          </div>
+          <!-- /.box-body -->
+        </div>
+

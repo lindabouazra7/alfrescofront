@@ -1,0 +1,156 @@
+<!--
+
+     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> 
+     <h1> Liste des utilisateurs!</h1>
+     
+     
+     <div>
+       <table class="table table-bordered">
+               <thead>
+             <tr>
+                 <th>Nom</th> 
+                 
+                 <th>Prenom </th>
+                 <th>Titre de travail  </th>
+                 <th>Numero de telephone  </th>
+                 <th>Email</th>
+                 <th>Company</th>
+                 <th>Organisation</th>
+                
+                
+             </tr>
+           </thead>
+           <tbody>
+           &lt;!&ndash;  <tr *ngFor="let item of restItems.list.entries ">
+                <td>{{item.user.lastName}}</td>
+                 <td>{{item.user.firstName}}</td>
+                 <td>{{item.user.jobTitle}}</td>
+                 <td>{{item.user.mobile}}</td>
+                 <td>{{item.user.email}}</td>
+                 <td>{{item.user.company.address1}}</td>
+                 <td>{{item.user.company.organization}}</td>
+     
+                 
+             </tr>&ndash;&gt;
+           </tbody>   
+         </table>
+     </div>
+
+-->
+
+<!--
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="header">
+            <h4 class="title">Liste des utilisateurs </h4>
+          </div>
+          <div class="content table-responsive table-full-width">
+            <table class="table table-hover table-striped">
+              <thead>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Titre de travail</th>
+              <th>Numero de telephone </th>
+              <th>Email</th>
+              <th>Company</th>
+              <th>Organisation</th>
+              <th>Actions</th>
+              </thead>
+              <tbody>
+              <tr *ngFor="let user of userList ">
+                <td>{{user.entry.lastName}}</td>
+                <td>{{user.entry.firstName}}</td>
+                <td>{{user.entry.jobTitle}}</td>
+                <td>{{user.entry.mobile}}</td>
+                <td>{{user.entry.email}}</td>
+                <td>{{user.entry.company.address1}}</td>
+                <td>{{user.entry.company.organization}}</td>
+
+
+
+                <td class="td-actions text-right">
+
+                  
+                  <button type="button" rel="tooltip" title="Modifier" class="btn btn-success btn-simple btn-xs">
+
+                    <i class="fa fa-edit"></i>
+
+                  </button>
+
+
+                </td>
+
+
+              </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+-->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+       Resultat de demande 
+    </h1>
+
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="box">
+          <div class="box-header">
+            <h3 class="box-title"> </h3>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <input name="args" [(ngModel)]="args" placeholder="Entrez le titre"><br>
+            <table id="example2" class="table table-bordered table-hover">
+              <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>CIN</th>
+                <th>date de début</th>
+                <th>date de fin</th>
+                <th>demande acceptée</th>
+                
+              </tr>
+              </thead>
+              <tbody>
+
+                <td>Atroussi </td>
+                <td>Ghazi </td>
+                <td>01234567</td>
+                <td>10/12/2018</td>
+                <td>15/12/2018</td>
+                <td>oui </td>
+               
+               
+                
+
+
+            </table>
+          </div>
+          <!-- /.box-body -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+
+

@@ -1,0 +1,52 @@
+<body>
+<div class="register-box">
+  <div class="register-logo">
+   
+  </div>
+
+  <div class="register-box-body">
+    <p class="login-box-msg"></p>
+
+    <form >
+        <img src="assets/dist/img/cnss.png" width="90%" >
+        <h1><img src="assets/dist/img/inscri.png"> Inscription  </h1>
+      
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" placeholder="nom" name="name" [(ngModel)]="name">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" placeholder="prenom" name="lastname" [(ngModel)]="lastname">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="email" class="form-control" placeholder="Email" name="email" [(ngModel)]="email">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="password" (blur)="confirmationPassword()" required placeholder="Password" #pswd="ngModel">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        <div [hidden]="pswd.valid || pswd.pristine" class="alert alert-danger">Password is required</div>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" placeholder="Retype password" [(ngModel)]="passwordConfirmationTxt" required (blur)="confirmPassword()" name="passwordConfirmationTxt"/>
+        <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+        <div [hidden]="!passwordConfirmationFailed" class="alert alert-danger">Password did not match</div>
+      </div>
+      <div class="row">
+
+        <!-- /.col -->
+        <div class="col-xs-4">
+         
+          <button type="submit" class="btn btn-primary btn-block btn-flat" (click)="register(name,name,lastname,email,password)">Register</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
+
+
+    <a routerLink="" class="text-center">Tu as un compte! Connectez !!</a>
+  </div>
+  <!-- /.form-box -->
+</div>
+</body>
